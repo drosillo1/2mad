@@ -35,7 +35,7 @@ export default function Home({ setCurrent }: HomeProps) {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-lg md:text-xl text-gray-600  text-black-300 mt-3"
         >
-          Mario • Alba • Dani
+          Mario • Alba • Dani 
         </motion.p> 
       </div>
 
