@@ -29,7 +29,7 @@ export default function Alba() {
 
         <p className="text-lg text-pink-800 leading-relaxed">
           Os apoyáis mutuamente y formáis un equipo increíble. 
-          Eres su persona favorita y él es tu compañero inseparable. 
+          Eres su lugar seguro y él es el tuyo. 
           Juntos habéis creado recuerdos que os acompañarán para siempre.
         </p>
       </div>

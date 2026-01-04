@@ -7,13 +7,15 @@ import { ChevronLeft, ChevronRight, Shuffle } from 'lucide-react';
 export default function Gifs() {
   const gifs = [
     'https://i.imgur.com/gNs7hCY.gif',
-    'https://i.imgur.com/RLhNTrJ.mp4',
+    'https://i.imgur.com/Sj069Mm.mp4',
+    'https://i.imgur.com/yxQuRVL.gif',
+    'https://i.imgur.com/e5CYhIX.mp4',
     'https://i.imgur.com/prkUwUw.mp4',
     'https://i.imgur.com/CBLhvH1.mp4', 
-    'https://i.imgur.com/T9jQhlL.mp4',
-    'https://i.imgur.com/yxQuRVL.gif',
-    'https://i.imgur.com/WFYW8vj.mp4',
-    'https://i.imgur.com/2ZWPuYD.mp4',
+    'https://i.imgur.com/Jdx672o.mp4',
+    'https://i.imgur.com/CGyt8Yw.mp4',
+    'https://i.imgur.com/jkjRcjb.mp4',
+    'https://i.imgur.com/2LL59Ko.mp4',
     // Añade más URLs aquí (pueden ser .gif o .mp4)
   ];
 
@@ -187,7 +189,7 @@ export default function Gifs() {
       {/* Info adicional */}
       <div className="text-center bg-gradient-to-r from-amber-100 via-orange-100 to-pink-100 p-8 rounded-xl">
         <p className="text-gray-700 text-lg">
-          💡 <strong>Tip:</strong> Usa el botón <Shuffle className="inline w-5 h-5" /> para ver un GIF sorpresa
+          💡 <strong>Tip:</strong> Usa el botón <Shuffle className="inline w-5 h-5" /> para ver GIFs de manera aleatoria.
         </p>
       </div>
     </div>
