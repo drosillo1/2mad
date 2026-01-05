@@ -55,8 +55,8 @@ export default function Quiz() {
     },
     {
       q: '¿Que le gusta hacer a Mario con su tito Jose?',
-      options: ['Jugar', 'Fumar', 'Pasear', 'No le gusta nada'],
-      correct: 1,
+      options: ['Jugar', 'Fumar', 'A y B son correctas', 'No le gusta hacer nada con él'],
+      correct: 2,
     },
   ];
 
