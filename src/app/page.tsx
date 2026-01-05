@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/components/Home';
@@ -13,6 +14,13 @@ import Gifs from '@/components/Gifs';
 
 export default function App() {
   const [current, setCurrent] = useState('home');
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [current]);
 
   const renderContent = () => {
     switch (current) {
@@ -28,8 +36,8 @@ export default function App() {
         return <Nosotros />;
       case 'quiz':
         return <Quiz />;
-        case 'gifs':           // ← NUEVO
-      return <Gifs />;
+      case 'gifs':
+        return <Gifs />;
       default:
         return <Home setCurrent={setCurrent} />;
     }
@@ -38,9 +46,21 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Navbar current={current} setCurrent={setCurrent} />
+      
       <main className="max-w-6xl mx-auto px-4 py-12">
-        {renderContent()}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          >
+            {renderContent()}
+          </motion.div>
+        </AnimatePresence>
       </main>
+      
       <Footer />
     </div>
   );
